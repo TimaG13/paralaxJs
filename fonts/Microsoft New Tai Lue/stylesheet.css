@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Microsoft New Tai Lue';
+    src: url('MicrosoftNewTaiLue.woff2') format('woff2'),
+        url('MicrosoftNewTaiLue.woff') format('woff'),
+        url('MicrosoftNewTaiLue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,21 +1,21 @@
 $(document).ready(function () {
 
-    $(function () {
-        // генератор случайной буквы
-        function str_rand() {
-            var result = '';
-            var words = 'QWERTYUIOPASDFGHJKLZXCVBNM';
-            var max_position = words.length - 1;
-            for (i = 0; i < 4; ++i) {
-                position = Math.floor(Math.random() * max_position);
-                result = result + words.substring(position, position + 1);
-            }
-            return result;
-        }
+    // $(function () {
+    //     // генератор случайной буквы
+    //     function str_rand() {
+    //         var result = '';
+    //         var words = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+    //         var max_position = words.length - 1;
+    //         for (i = 0; i < 4; ++i) {
+    //             position = Math.floor(Math.random() * max_position);
+    //             result = result + words.substring(position, position + 1);
+    //         }
+    //         return result;
+    //     }
 
         // функция скрол
-        var $win = $(window);
-        var $marker = $('#gen');
+        //var $win = $(window);
+        //var $marker = $('#gen');
         // $win.scroll(function () {
         //     if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
         //         // записую случайные буквы
@@ -33,8 +33,8 @@ $(document).ready(function () {
         //     }
         // });
 
-        var widthWin = $(window);
-        var myElem = $('#short_link');
+       // var widthWin = $(window);
+       // var myElem = $('#short_link');
 
         // window.onscroll = function () {
         //     if ($(document).scrollTop() + $(window).height() > $('#short_link').offset().top && $(document).scrollTop() - $('#short_link').offset().top < $('#short_link').height()) {
@@ -56,33 +56,33 @@ $(document).ready(function () {
         // };
 
 
-    });
+    // });
 
     // hov
 
-    var timeout;
-    $('#container').mousemove(function(e){
-        if(timeout) clearTimeout(timeout);
-        setTimeout(callParallax.bind(null, e), 200);
+    //var timeout;
+    // $('#container').mousemove(function(e){
+    //     if(timeout) clearTimeout(timeout);
+    //     setTimeout(callParallax.bind(null, e), 200);
+    //
+    // });
 
-    });
-
-    function callParallax(e){
-        parallaxIt(e, '.slide', -100);
-        parallaxIt(e, '#container .slide img', -30);
-    }
-
-    function parallaxIt(e, target, movement){
-        var $this = $('#container');
-        var relX = e.pageX - $this.offset().left;
-        var relY = e.pageY - $this.offset().top;
-
-        TweenMax.to(target, 1, {
-            x: (relX - $this.width()/2) / $this.width() * 300,
-            y: (relY - $this.height()/2) / $this.height() * 200,
-            ease: Power2.easeOut
-        })
-    }
+    // function callParallax(e){
+    //     parallaxIt(e, '.slide', -100);
+    //     parallaxIt(e, '#container .slide img', -30);
+    // }
+    //
+    // function parallaxIt(e, target, movement){
+    //     var $this = $('#container');
+    //     var relX = e.pageX - $this.offset().left;
+    //     var relY = e.pageY - $this.offset().top;
+    //
+    //     TweenMax.to(target, 1, {
+    //         x: (relX - $this.width()/2) / $this.width() * 300,
+    //         y: (relY - $this.height()/2) / $this.height() * 200,
+    //         ease: Power2.easeOut
+    //     })
+    // }
 
     //carousel
     $('.center').slick({
@@ -118,4 +118,13 @@ $(document).ready(function () {
     btnprev.innerHTML = "<span class=\"glyphicon glyphicon-menu-right\" aria-hidden=\"true\"></span>";
     //wow animate
     new WOW().init();
+    //scroll
+    $(function() {
+        // Default
+        jQuery.scrollSpeed(100, 800);
+
+        // Custom Easing
+        jQuery.scrollSpeed(100, 800, 'easeOutCubic');
+    });
+
 });

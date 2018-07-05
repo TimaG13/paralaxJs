@@ -15,8 +15,8 @@ $(function(){
         var finalScroll = scrollTop - parseInt(delta*scrollDistance);
 
         TweenMax.to($window, scrollTime, {
-            scrollTo : { y: finalScroll, autoKill:true },
-            ease: Power1.easeOut,	//For more easing functions see http://api.greensock.com/js/com/greensock/easing/package-detail.html
+            scrollTo : { y: finalScroll, autoKill:false },
+            ease: Power1.easeOut,
             autoKill: true,
             overwrite: 5
         });

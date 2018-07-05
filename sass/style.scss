@@ -11,9 +11,17 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Microsoft New Tai Lue bold';
+  src: url('../../fonts/Microsoft New Tai Lue/MicrosoftNewTaiLue-Bold.woff2') format('woff2'),
+  url('../../fonts/Microsoft New Tai Lue/MicrosoftNewTaiLue-Bold.woff') format('woff'),
+  url('../../fonts/Microsoft New Tai Lue/MicrosoftNewTaiLue-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 body {
   font: 18px 'Microsoft New Tai Lue';
+  overflow-x: hidden;
 }
 
 a,button{
@@ -24,7 +32,6 @@ a,button{
     outline: none;
   }
 }
-
 /*===========================================*/
 
 #short_link {
@@ -51,7 +58,6 @@ a,button{
   .slide {
     display: block;
     position: relative;
-    //transition: .3s ;
 
     img {
       position: absolute;
@@ -249,8 +255,8 @@ section.wrapper-hd {
           margin: 0 0 auto auto;
 
           h1 {
-            font: 80px 'Microsoft New Tai Lue';
-            font-weight: bolder;
+            font: 80px 'Microsoft New Tai Lue bold';
+            font-weight: bold;
             background: -webkit-linear-gradient(145deg, #fff, #000);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -459,13 +465,13 @@ section.wrapper-hd {
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-      background: linear-gradient(to right,#fff0,#ffffff 40%);
+      background: linear-gradient(to right,rgba(255,255,255,0),#ffffff 40%);
       z-index: 11;
       h2,p{
         max-width: 457px;
       }
       h2{
-        font-size: 50px;
+        font: 50px 'Microsoft New Tai Lue bold';
         color: #2e3645;
         font-weight: bold;
         margin-bottom: 15px;

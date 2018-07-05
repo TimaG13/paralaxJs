@@ -1,3 +1,29 @@
+//scroll
+$(function(){
+
+    var $window = $(window);		//Window object
+
+    var scrollTime = 0.5;			//Scroll time
+    var scrollDistance = 200;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
+
+    $window.on("mousewheel DOMMouseScroll", function(event){
+
+        event.preventDefault();
+
+        var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+        var scrollTop = $window.scrollTop();
+        var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+        TweenMax.to($window, scrollTime, {
+            scrollTo : { y: finalScroll, autoKill:true },
+            ease: Power1.easeOut,	//For more easing functions see http://api.greensock.com/js/com/greensock/easing/package-detail.html
+            autoKill: true,
+            overwrite: 5
+        });
+
+    });
+
+});
 $(document).ready(function () {
 
     // $(function () {
@@ -13,47 +39,47 @@ $(document).ready(function () {
     //         return result;
     //     }
 
-        // функция скрол
-        //var $win = $(window);
-        //var $marker = $('#gen');
-        // $win.scroll(function () {
-        //     if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
-        //         // записую случайные буквы
-        //         var st = setInterval(function () {
-        //             $("#short_link").text(str_rand());
-        //         }, 90);
-        //         // останавливаю запись букв
-        //         setTimeout(function () {
-        //             clearInterval(st);
-        //         }, 1000);
-        //         // записую текст
-        //         setTimeout(function () {
-        //             $("#short_link").html('tima');
-        //         }, 1001);
-        //     }
-        // });
+    // функция скрол
+    //var $win = $(window);
+    //var $marker = $('#gen');
+    // $win.scroll(function () {
+    //     if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
+    //         // записую случайные буквы
+    //         var st = setInterval(function () {
+    //             $("#short_link").text(str_rand());
+    //         }, 90);
+    //         // останавливаю запись букв
+    //         setTimeout(function () {
+    //             clearInterval(st);
+    //         }, 1000);
+    //         // записую текст
+    //         setTimeout(function () {
+    //             $("#short_link").html('tima');
+    //         }, 1001);
+    //     }
+    // });
 
-       // var widthWin = $(window);
-       // var myElem = $('#short_link');
+    // var widthWin = $(window);
+    // var myElem = $('#short_link');
 
-        // window.onscroll = function () {
-        //     if ($(document).scrollTop() + $(window).height() > $('#short_link').offset().top && $(document).scrollTop() - $('#short_link').offset().top < $('#short_link').height()) {
-        //     }
-        //     else {
-        //         // записую случайные буквы
-        //         var st = setInterval(function () {
-        //             $("#short_link").text(str_rand());
-        //         }, 100);
-        //         // останавливаю запись букв
-        //         setTimeout(function () {
-        //             clearInterval(st);
-        //         }, 1500);
-        //         // записую текст
-        //         setTimeout(function () {
-        //             $("#short_link").html('tima');
-        //         }, 1501);
-        //     }
-        // };
+    // window.onscroll = function () {
+    //     if ($(document).scrollTop() + $(window).height() > $('#short_link').offset().top && $(document).scrollTop() - $('#short_link').offset().top < $('#short_link').height()) {
+    //     }
+    //     else {
+    //         // записую случайные буквы
+    //         var st = setInterval(function () {
+    //             $("#short_link").text(str_rand());
+    //         }, 100);
+    //         // останавливаю запись букв
+    //         setTimeout(function () {
+    //             clearInterval(st);
+    //         }, 1500);
+    //         // записую текст
+    //         setTimeout(function () {
+    //             $("#short_link").html('tima');
+    //         }, 1501);
+    //     }
+    // };
 
 
     // });
@@ -118,13 +144,6 @@ $(document).ready(function () {
     btnprev.innerHTML = "<span class=\"glyphicon glyphicon-menu-right\" aria-hidden=\"true\"></span>";
     //wow animate
     new WOW().init();
-    //scroll
-    $(function() {
-        // Default
-        jQuery.scrollSpeed(100, 800);
 
-        // Custom Easing
-        jQuery.scrollSpeed(100, 800, 'easeOutCubic');
-    });
 
 });

@@ -11,6 +11,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Microsoft New Tai Lue bold';
   src: url('../../fonts/Microsoft New Tai Lue/MicrosoftNewTaiLue-Bold.woff2') format('woff2'),
@@ -20,51 +21,50 @@
   font-style: normal;
 }
 
-
 //scroll
 ::-webkit-scrollbar-button {
   background: #454545;
-  width:5px;
-  height:0
+  width: 5px;
+  height: 0
 }
 
 ::-webkit-scrollbar-track {
-  background-color:#ecedee
+  background-color: #ecedee
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   -webkit-border-radius: 0;
   background-color: #3d3d3d;
   border-radius: 25px;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background-color: #595959;
 }
 
-::-webkit-resizer{
-  width:4px;
-  height:0
+::-webkit-resizer {
+  width: 4px;
+  height: 0
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
-
 
 body {
   font: 18px 'Microsoft New Tai Lue';
   overflow-x: hidden;
 }
 
-a,button{
+a, button {
   text-decoration: none;
   outline: none;
-  &:active, &:hover, &:focus{
+  &:active, &:hover, &:focus {
     text-decoration: none;
     outline: none;
   }
 }
+
 /*===========================================*/
 
 #short_link {
@@ -202,9 +202,36 @@ a,button{
 
 //header
 section.wrapper-hd {
-  background: url("../../dist/img/bac-1.png"),
-  url("../../dist/img/bac-2l.png") no-repeat left,
-  url("../../dist/img/bac-3r.png") no-repeat right;
+  position: relative;
+  i.heb-bg1{
+position: absolute;
+    top: 100px;
+    left: 0;
+    &:after{
+      content: url("../../dist/img/bac-1.png");
+      display: block;
+    }
+  }
+  i.heb-bg2{
+position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    &:after{
+      content: url("../../dist/img/bac-2l.png");
+      display: block;
+    }
+  }
+  i.heb-bg3{
+position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    &:after{
+      content: url("../../dist/img/bac-3r.png");
+      display: block;
+    }
+  }
   padding-bottom: 80px;
   .container-fluid.pad-0 {
     padding: 0;
@@ -349,27 +376,34 @@ section.wrapper-hd {
     }
   }
 }
+
 //slider
-.secsh-slid{
+.secsh-slid {
   position: relative;
-  background: url("../../dist/img/bac-1.png")center center,
-              url("../../dist/img/slid-dg-2.png")right bottom;
-  i.bg-left{
+  background: url("../../dist/img/bac-1.png") center center,
+  url("../../dist/img/slid-dg-2.png") right bottom;
+  i.bg-left {
     position: absolute;
-    content: url("../../dist/img/slider-bg-1.png");
     left: 0;
     bottom: -195px;
     z-index: -1;
+    &:after{
+      content: url("../../dist/img/slider-bg-1.png");
+      display: block;
+    }
   }
-  i.bg-right{
+  i.bg-right {
     position: absolute;
-    content: url("../../dist/img/slider-bd2.png");
     right: 0;
     bottom: -125px;
     z-index: -1;
+    &:after{
+      content: url("../../dist/img/slider-bd2.png");
+      display: block;
+    }
   }
-  .center{
-    .slick-prev.slick-arrow{
+  .center {
+    .slick-prev.slick-arrow {
       position: absolute;
       top: 50%;
       left: 150px;
@@ -383,12 +417,12 @@ section.wrapper-hd {
       display: flex;
       justify-content: center;
       outline: none;
-      span{
+      span {
         color: #464646;
         font-size: 35px;
       }
     }
-    .slick-next.slick-arrow{
+    .slick-next.slick-arrow {
       position: absolute;
       top: 50%;
       right: 150px;
@@ -402,16 +436,16 @@ section.wrapper-hd {
       display: flex;
       justify-content: center;
       outline: none;
-      span{
+      span {
         font-size: 35px;
         color: #464646;
       }
     }
-    .slick-list.draggable{
+    .slick-list.draggable {
       overflow: hidden;
       position: relative;
       height: 1055px;
-      &:before{
+      &:before {
         position: absolute;
         content: "";
         width: 500px;
@@ -422,14 +456,14 @@ section.wrapper-hd {
         top: -19%;
         transform: translateX(-50%);
       }
-      .slick-track{
+      .slick-track {
         display: flex;
-        .slick-slide{
+        .slick-slide {
           float: none;
           box-shadow: 0 35px 127px -28px #333;
           position: relative;
           outline: none;
-          .link-product{
+          .link-product {
             position: absolute;
             left: 50%;
             bottom: 8%;
@@ -437,86 +471,157 @@ section.wrapper-hd {
             font-size: 32px;
             letter-spacing: 7px;
             font-weight: bold;
-            padding:20px 52px;
+            padding: 20px 52px;
             color: #ffffff;
             border-radius: 0;
             border: 3px solid #ffffff;
             opacity: 0;
             cursor: context-menu;
           }
-          img{
+          img {
             width: 100%;
           }
-          &.slick-active.slick-center{
+          &.slick-active.slick-center {
             margin-top: 75px;
             transform: scale(1.1);
             z-index: 999;
             transition: all .3s ease;
-            .link-product{
+            .link-product {
               opacity: 1;
               cursor: pointer;
             }
           }
         }
-        &:nth-child(1) .slick-active{
+        &:nth-child(1) .slick-active {
           margin-right: -135px;
         }
       }
     }
   }
 }
+
 //box
-.container-fluid{
-  .wrapper-box{
+.container-fluid {
+  //box 1
+  .wrapper-box {
     margin: 0 -15px;
     position: relative;
-
-    i.p-box{
+    padding-bottom: 170px;
+    background: transparent url("../../dist/img/bac-1.png");
+    background-size: cover;
+    z-index: -1;
+    i.p-box {
       position: absolute;
-      content: url("../../dist/img/box-bg-p.png");
       left: 35%;
       bottom: -686px;
+      z-index: 1;
+      &:after{
+        content: url("../../dist/img/box-bg-p.png");
+        display: block;
+      }
     }
-    i.box-bg1{
+    i.box-ce {
       position: absolute;
-      content: url("../../dist/img/box-bg1.png");
+      left: 35%;
+      bottom: -450px;
+      z-index: -1;
+      &:after{
+        content: url("../../dist/img/box-bg-centr.png");
+        display: block;
+      }
+    }
+    i.box-bg1 {
+      position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
+      &:after{
+        content: url("../../dist/img/box-bg1.png");
+        display: block;
+      }
     }
-    i.box-bg2{
+    i.box-bg2 {
       position: absolute;
-      content: url("../../dist/img/box-bg2.png");
       bottom: -285px;
       left: 67px;
-      z-index: 1;
+      z-index: -1;
+      &:after{
+        content: url("../../dist/img/box-bg2.png");
+        display: block;
+      }
     }
-    .box-text{
-      padding: 160px 220px 265px 475px;
+    i.box-bg-r {
+      position: absolute;
+      bottom: -285px;
+      right: 0;
+      z-index: -1;
+      &:after{
+        content: url("../../dist/img/box1-bg-r.png");
+        display: block;
+      }
+    }
+    .box-text.p-l{
+      left: 0;
+    }
+    .box-text {
+      height: 610px;
+      padding: 160px 220px 160px 475px;
       margin: auto 0;
       position: absolute;
-      top: 50%;
-      left: 0;
+      top: calc(50% - 85px);
       transform: translateY(-50%);
-      background: linear-gradient(to right,rgba(255,255,255,0),#ffffff 40%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff 40%);
       z-index: 11;
-      h2,p{
+      h2, p {
         max-width: 457px;
       }
-      h2{
+      h2 {
         font: 50px 'Microsoft New Tai Lue bold';
         color: #2e3645;
         font-weight: bold;
         margin-bottom: 15px;
       }
-      p{
+      p {
         font-size: 18px;
         color: #2e2d2d;
         margin-bottom: 40px;
       }
     }
-    .box-img{
+    .box-img {
       float: right;
+    }
+  }
+  //box2
+  .wrapper-box.box-two {
+    background: url("../../dist/img/bac-1.png");
+    background-size: cover;
+    i.box2-p {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      &:after{
+        content: url("../../dist/img/box2-bg-p.png");
+        display: block;
+      }
+    }
+    i.box2-bg-tt {
+      position: absolute;
+      left: 0;
+      top: -60%;
+      z-index: -1;
+      &:after{
+        content: url("../../dist/img/box2-bg-tt.png");
+        display: block;
+      }
+    }
+    .box-img {
+      float: left;
+    }
+    .box-text.p-r{
+      right: 0;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff 40%);
+      padding: 160px 475px 160px 220px;
     }
   }
 }

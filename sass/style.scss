@@ -69,7 +69,7 @@ a, button {
 
 #short_link {
   color: #fff;
-  background: url(../img/black-shoe-white-shoelaces-5183520.jpg) no-repeat;
+  background: url(../img/gallery-img5.png) no-repeat;
   background-clip: text;
   font-weight: bolder;
   -webkit-background-clip: text;
@@ -79,86 +79,81 @@ a, button {
 
 //hov
 #container {
-  overflow: hidden;
   position: relative;
   height: 100vh;
   width: 100%;
-  border: solid 1px red;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 
   .slide {
     display: block;
-    position: relative;
-
+    position: absolute;
+    //transform: matrix(1, 0, 0, 1, 0, 0) !important;
     img {
-      position: absolute;
       top: 0;
       left: 0;
-      width: 300px;
-      height: 300px;
+      width: 100%;
+      perspective: 400;
     }
   }
   .one {
-    background: #ffd10d;
-    left: -111px;
-    top: -500px;
+    left: -4%;
+    top: -5%;
+    width: 677px;
+    perspective: 400;
   }
   .two {
-    background: blue;
-    left: -800px;
-    top: -380px;
+    left: 50%;
+    top: -6%;
+    margin-left: -157px;
+    perspective: 400;
   }
   .three {
-    background: black;
-    left: 180px;
-    top: 50px;
+    right: -6%;
+    top: -5%;
+    perspective: 400;
   }
   .four {
-    background: #333333;
-    left: 300px;
-    top: 120px;
+    left: -8%;
+    bottom: -5%;
+    perspective: 400;
   }
   .five {
-    background: #00b3ee;
-    right: 0;
-    top: 100%;
+    left: 50%;
+    margin-left: -353px;
+    bottom: -7%;
+    perspective: 400;
   }
   .six {
-    background: #2b542c;
-    right: 50%;
-    top: 90px;
+    right: -8%;
+    top: 50%;
+    margin-top: -192px;
+    perspective: 400;
   }
   .seven {
-    background: #2e6da4;
-    right: -200px;
-    top: 50%;
+    right:-8%;
+    bottom: -4%;
+    perspective: 400;
   }
-  .eight {
-    background: #1b6d85;
-    left: -300px;
-    top: 20%;
-  }
-  .nine {
-    background: #9acfea;
-    bottom: 10px;
-    left: 800px;
-  }
-  .ten {
-    background: #00b3ee;
-    right: -500px;
-    top: 300px;
-  }
-  .eleven {
-    background: #122b40;
-    left: 900px;
-    top: -400px;
-  }
-  .twelve {
-    background: #398439;
-    left: 600px;
-    top: 800px;
+  .gallery-content{
+    z-index: 5;
+    max-width: 930px;
+    h3{
+      font: 60px "Microsoft New Tai Lue bold";
+      font-weight: bold;
+      color: #2e3645;
+    }
+    p{
+      font: 35px "Microsoft New Tai Lue bold";
+      color: #2e2d2d;
+      margin-bottom: 30px;
+    }
+    span{
+      font-size: 30px;
+      color: #050505;
+    }
   }
 }
 
@@ -482,7 +477,7 @@ position: absolute;
             width: 100%;
           }
           &.slick-active.slick-center {
-            margin-top: 75px;
+            margin: 75px 8px 0;
             transform: scale(1.1);
             z-index: 999;
             transition: all .3s ease;
@@ -625,3 +620,5 @@ position: absolute;
     }
   }
 }
+
+

@@ -1,3 +1,4 @@
+
 //scroll
 $(function () {
 
@@ -26,68 +27,42 @@ $(function () {
 });
 $(document).ready(function () {
 
-    $(function () {
-        // генератор случайной буквы
-        function str_rand() {
-            var result = '';
-            var words = 'QWERTYUIOPASDFGHJKLZXCVBNM';
-            var max_position = words.length - 1;
-            for (i = 0; i < 4; ++i) {
-                position = Math.floor(Math.random() * max_position);
-                result = result + words.substring(position, position + 1);
+    // anim rand text
+    $('#short_link').on('scrollSpy:enter', function () {
+        //когда элемент виден
+        $(function () {
+            // генератор случайной буквы
+            function str_rand() {
+                var result = '';
+                var words = 'QWERTY UIOPAS D FGHJ KLZXCV BNM';
+                var max_position = words.length - 1;
+                for (i = 0; i < 15; ++i) {
+                    position = Math.floor(Math.random() * max_position);
+                    result = result + words.substring(position, position + 1);
+                }
+                return result;
             }
-            return result;
-        }
+            // записую случайные буквы
+            var st = setInterval(function () {
+                $("#short_link").text(str_rand());
+            }, 50);
+            // останавливаю запись букв
+            setTimeout(function () {
+                clearInterval(st);
+            }, 1000);
+            // записую текст
+            setTimeout(function () {
+                $("#short_link").html('Lorem ipsum');
+            }, 1001);
 
-        // функция скрол
-        var $win = $(window);
-        var $marker = $('#gen');
-        $win.scroll(function () {
-            if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
-                // записую случайные буквы
-                var st = setInterval(function () {
-                    $("#short_link").text(str_rand());
-                }, 90);
-                // останавливаю запись букв
-                setTimeout(function () {
-                    clearInterval(st);
-                }, 1000);
-                // записую текст
-                setTimeout(function () {
-                    $("#short_link").html('tima');
-                }, 1001);
-            }
         });
-
-        var widthWin = $(window);
-        var myElem = $('#short_link');
-
-        window.onscroll = function () {
-            if ($(document).scrollTop() + $(window).height() > $('#short_link').offset().top && $(document).scrollTop() - $('#short_link').offset().top < $('#short_link').height()) {
-            }
-            else {
-                // записую случайные буквы
-                var st = setInterval(function () {
-                    $("#short_link").text(str_rand());
-                }, 100);
-                // останавливаю запись букв
-                setTimeout(function () {
-                    clearInterval(st);
-                }, 1500);
-                // записую текст
-                setTimeout(function () {
-                    $("#short_link").html('tima');
-                }, 1501);
-            }
-        };
-
-
     });
-
+    $('#short_link').scrollSpy();
+    ///////////////////
     //hov
 
     var timeout;
-    $('#container').mousemove(function (e) {
+    $('.gallery').mousemove(function (e) {
         if (timeout) clearTimeout(timeout);
         setTimeout(callParallax.bind(null, e), 200);
 
@@ -95,11 +70,11 @@ $(document).ready(function () {
 
     function callParallax(e) {
         parallaxIt(e, '.slide', -100);
-        parallaxIt(e, '#container .slide', 0);
+        parallaxIt(e, '.gallery .slide', 0);
     }
 
     function parallaxIt(e, target, movement) {
-        var $this = $('#container');
+        var $this = $('.gallery');
         var relX = e.pageX - $this.offset().left;
         var relY = e.pageY - $this.offset().top;
 
@@ -139,17 +114,81 @@ $(document).ready(function () {
     });
 
     ///////////////////
-    // $('.tile').on('scrollSpy:enter', function() {
-    //     //когда элемент виден
-    //     console.log('enter:', $(this).attr('id'));
-    // });
-    //
-    // $('.tile').on('scrollSpy:exit', function() {
-    //     //когда элемент не виден
-    //     console.log('exit:', $(this).attr('id'));
-    // });
-    //
-    // $('.tile').scrollSpy();
+    // anim-1
+    $('.anim-1').on('scrollSpy:enter', function () {
+        //когда элемент виден
+        //animated
+        $(".anim-1").addClass("animated");
+        $(".anim-1").css({"animation-name": "fadeIn", "visibility": "visible"});
+        setTimeout(function () {
+            $(".anim-1").removeClass("animated");
+        }, 200);
+    });
+    $('.anim-1').on('scrollSpy:exit', function () {
+        //когда элемент не виден
+        $(".anim-1").css({"animation-name": "none", "visibility": "hidden"});
+    });
+    $('.anim-1').scrollSpy();
+    ///////////////////
+///////////////////
+    // anim-1-box2
+    $('.anim-1-box2').on('scrollSpy:enter', function () {
+        //когда элемент виден
+        $(".anim-1-box2").css({"animation-name": "myanim1", "opacity": "1"});
+        setTimeout(function () {
+            $(".anim-1-box2").removeClass("animated");
+        }, 200);
+    });
+    $('.anim-1-box2').on('scrollSpy:exit', function () {
+        //когда элемент не виден
+        $(".anim-1-box2").css({"animation-name": "none", "opacity": "0"});
+    });
+    $('.anim-1-box2').scrollSpy();
+    ///////////////////
+    // anim-2-box2
+    $('.anim-2-box2').on('scrollSpy:enter', function () {
+        //когда элемент виден
+        $(".anim-2-box2").css({"animation-name": "myanim2", "opacity": "1"});
+        setTimeout(function () {
+            $(".anim-2-box2").removeClass("animated");
+        }, 200);
+    });
+    $('.anim-2-box2').on('scrollSpy:exit', function () {
+        //когда элемент не виден
+        $(".anim-2-box2").css({"animation-name": "none", "opacity": "0"});
+    });
+    $('.anim-2-box2').scrollSpy();
+    ///////////////////
+    // anim-3-box2
+    $('.anim-3-box2').on('scrollSpy:enter', function () {
+        //когда элемент виден
+        $(".anim-3-box2").css({"animation-name": "myanim3", "opacity": "1"});
+        setTimeout(function () {
+            $(".anim-3-box2").removeClass("animated");
+        }, 200);
+    });
+    $('.anim-3-box2').on('scrollSpy:exit', function () {
+        //когда элемент не виден
+        $(".anim-3-box2").css({"animation-name": "none", "opacity": "0"});
+    });
+    $('.anim-3-box2').scrollSpy();
+    ///////////////////
+///////////////////
+    // anim slider
+    $('.myAnimSlider').on('scrollSpy:enter', function () {
+        //когда элемент виден
+        //animated
+        //$(".anim-1-box2").addClass("animated");
+        $(".myAnimSlider").css({"animation-name": "myAnimSlider", "opacity": "1"});
+        setTimeout(function () {
+            $(".myAnimSlider").removeClass("animated");
+        }, 200);
+    });
+    $('.myAnimSlider').on('scrollSpy:exit', function () {
+        //когда элемент не виден
+        $(".myAnimSlider").css({"animation-name": "none", "opacity": "0"});
+    });
+    $('.myAnimSlider').scrollSpy();
     ///////////////////
 
 
@@ -165,6 +204,7 @@ $(document).ready(function () {
         $layer_1 = $('.layer-1'),
         $layer_2 = $('.layer-2'),
         $layer_3 = $('.layer-3'),
+        $layer_4 = $('.layer-4'),
         $container = $('body'),
         container_w = $container.width(),
         container_h = $container.height();
@@ -177,26 +217,27 @@ $(document).ready(function () {
 
         left = container_w / 2 - pos_x;
         tops = container_h / 2 - pos_y;
-
-        // TweenMax.to(
-        //     $layer_1,
-        //     1,
-        //     {
-        //         css: {
-        //             transform: 'translateX(' + left / 40 + 'px) translateY(' + tops / 40 + 'px)'
-        //         },
-        //         ease: Expo.easeOut,
-        //         overwrite: 'all'
-        //     });
-        //
-        // TweenMax.to(
-        //     $layer_0,
-        //     10,
-        //     {
-        //         css: {transform: 'rotate(' + left / 50 + 'deg)'},
-        //         ease: Expo.easeOut,
-        //         overwrite: 'none'
-        //     });
+        TweenMax.set($layer_1, {perspective: 400});
+        TweenMax.to(
+            $layer_1,
+            1,
+            {
+                css: {
+                    transform: 'translateX(' + left / 40 + 'px) translateY(' + tops / 40 + 'px)'
+                },
+                ease: Expo.easeOut,
+                overwrite: 'all'
+            });
+        TweenMax.set($layer_0, {perspective: 400});
+        TweenMax.to(
+            $layer_0,
+            10,
+            {
+                css: {transform: 'rotate(' * tops / left / 5 + 'deg)'},
+                ease: Expo.easeOut,
+                overwrite: 'none'
+            });
+        TweenMax.set($layer_2, {perspective: 400});
         TweenMax.to(
             $layer_2,
             16, {
@@ -206,17 +247,31 @@ $(document).ready(function () {
                 ease: Expo.easeOut,
                 overwrite: 'none'
             });
-        TweenMax.set($layer_3, {perspective:400});
+
+        TweenMax.set($layer_3, {perspective: 400});
         TweenMax.to(
             $layer_3,
-            10, {css:
+            10, {
+                css:
                     {
-                       transform: 'rotate3d(0,0,' + left / 50 + 'deg,0)',
+                        transform: 'rotateY(0' + left / 100 + 'deg)'
                     },
                 ease: Expo.easeOut,
                 overwrite: 'none'
+            });
+        TweenMax.set($layer_4, {perspective: 400});
+        TweenMax.to(
+            $layer_4,
+            10, {
+                css:
+                    {
+                        transform: 'rotateY(0' + left / 50 + 'deg)'
+                    },
+                ease: Expo.easeOut,
+                overwrite: 'all'
             })
     });
+    /////////
 
 
 });

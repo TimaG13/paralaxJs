@@ -1,6 +1,15 @@
 @charset "UTF-8";
 @import "../dist/css/slick.css";
-@import "../dist/css/animate.css";
+@import "../fonts/font-awesome-4.7.0/scss/_variables.scss";
+@import "../fonts/font-awesome-4.7.0/scss/font-awesome.scss";
+
+@font-face {
+  font-family: FontAwesome;
+  src: url(../../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0);
+  src: url(../../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(../../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0) format("woff2"), url(../../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0) format("woff"), url(../../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0) format("truetype"), url(../../fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
+  font-weight: 400;
+  font-style: normal
+}
 
 //font
 @font-face {
@@ -78,19 +87,20 @@ a, button {
 }
 
 //hov
-#container {
+.gallery {
   position: relative;
-  height: 100vh;
+  min-height: 1324px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  margin-bottom: 200px;
 
   .slide {
     display: block;
     position: absolute;
-    //transform: matrix(1, 0, 0, 1, 0, 0) !important;
+    z-index: -100;
+
     img {
       top: 0;
       left: 0;
@@ -133,26 +143,70 @@ a, button {
     perspective: 400;
   }
   .seven {
-    right:-8%;
+    right: -8%;
     bottom: -4%;
     perspective: 400;
   }
-  .gallery-content{
+  .gallery-content {
     z-index: 5;
     max-width: 930px;
-    h3{
+    position: relative;
+    h3 {
       font: 60px "Microsoft New Tai Lue bold";
       font-weight: bold;
       color: #2e3645;
     }
-    p{
+    p {
       font: 35px "Microsoft New Tai Lue bold";
       color: #2e2d2d;
       margin-bottom: 30px;
     }
-    span{
+    span {
       font-size: 30px;
       color: #050505;
+    }
+
+  }
+}
+
+.gallery.gallery-two {
+
+  .two {
+    top: 50%;
+    left: 0;
+    margin-top: -275px;
+  }
+  .gallery-content{
+    .descrin-gallery {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h3 {
+        white-space: nowrap;
+        font: 74px 'Microsoft New Tai Lue bold';
+        font-weight: bold;
+        color: #131313;
+        background: #ffffff;
+        padding: 10px 10px 0;
+        line-height: 1;
+        letter-spacing: 5px;
+        margin-bottom: 25px;
+      }
+      a{
+        padding: 35px 75px;
+        background: linear-gradient(to right,#232323,#3d3d3d);
+        font-family: 'Microsoft New Tai Lue bold';
+        font-weight: bold;
+        font-size: 32px;
+        color: #ffffff;
+        letter-spacing: 5px;
+      }
     }
   }
 }
@@ -198,31 +252,31 @@ a, button {
 //header
 section.wrapper-hd {
   position: relative;
-  i.heb-bg1{
-position: absolute;
+  i.heb-bg1 {
+    position: absolute;
     top: 100px;
     left: 0;
-    &:after{
+    &:after {
       content: url("../../dist/img/bac-1.png");
       display: block;
     }
   }
-  i.heb-bg2{
-position: absolute;
+  i.heb-bg2 {
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    &:after{
+    &:after {
       content: url("../../dist/img/bac-2l.png");
       display: block;
     }
   }
-  i.heb-bg3{
-position: absolute;
+  i.heb-bg3 {
+    position: absolute;
     top: 0;
     right: 0;
     z-index: -1;
-    &:after{
+    &:after {
       content: url("../../dist/img/bac-3r.png");
       display: block;
     }
@@ -382,7 +436,7 @@ position: absolute;
     left: 0;
     bottom: -195px;
     z-index: -1;
-    &:after{
+    &:after {
       content: url("../../dist/img/slider-bg-1.png");
       display: block;
     }
@@ -392,7 +446,7 @@ position: absolute;
     right: 0;
     bottom: -125px;
     z-index: -1;
-    &:after{
+    &:after {
       content: url("../../dist/img/slider-bd2.png");
       display: block;
     }
@@ -510,7 +564,7 @@ position: absolute;
       left: 35%;
       bottom: -686px;
       z-index: 1;
-      &:after{
+      &:after {
         content: url("../../dist/img/box-bg-p.png");
         display: block;
       }
@@ -520,7 +574,7 @@ position: absolute;
       left: 35%;
       bottom: -450px;
       z-index: -1;
-      &:after{
+      &:after {
         content: url("../../dist/img/box-bg-centr.png");
         display: block;
       }
@@ -530,7 +584,7 @@ position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
-      &:after{
+      &:after {
         content: url("../../dist/img/box-bg1.png");
         display: block;
       }
@@ -540,7 +594,7 @@ position: absolute;
       bottom: -285px;
       left: 67px;
       z-index: -1;
-      &:after{
+      &:after {
         content: url("../../dist/img/box-bg2.png");
         display: block;
       }
@@ -550,20 +604,21 @@ position: absolute;
       bottom: -285px;
       right: 0;
       z-index: -1;
-      &:after{
+      &:after {
         content: url("../../dist/img/box1-bg-r.png");
         display: block;
       }
     }
-    .box-text.p-l{
+    .box-text.p-l {
       left: 0;
     }
     .box-text {
       height: 610px;
       padding: 160px 220px 160px 475px;
       margin: auto 0;
+      margin-top: -85px;
       position: absolute;
-      top: calc(50% - 85px);
+      top: 50%;
       transform: translateY(-50%);
       background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff 40%);
       z-index: 11;
@@ -595,7 +650,7 @@ position: absolute;
       left: 0;
       top: 0;
       z-index: 1;
-      &:after{
+      &:after {
         content: url("../../dist/img/box2-bg-p.png");
         display: block;
       }
@@ -605,7 +660,7 @@ position: absolute;
       left: 0;
       top: -60%;
       z-index: -1;
-      &:after{
+      &:after {
         content: url("../../dist/img/box2-bg-tt.png");
         display: block;
       }
@@ -613,7 +668,7 @@ position: absolute;
     .box-img {
       float: left;
     }
-    .box-text.p-r{
+    .box-text.p-r {
       right: 0;
       background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff 40%);
       padding: 160px 475px 160px 220px;
@@ -621,4 +676,169 @@ position: absolute;
   }
 }
 
+///////////////////////
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/////////////////////////////
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@keyframes myanim1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(1089px, 500px, 0) translateX(-500px) rotate(-45deg) perspective(1100px) rotate3d(0, -100, -30, -220deg);
+    transform: translate3d(1089px, 500px, 0) translateX(-500px) rotate(-45deg) perspective(1100px) rotate3d(0, -100, -30, -220deg);
+    z-index: -1;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) rotate(0) perspective(0) rotate3d(0, 0, 0, 0);
+    transform: translate3d(0, 0, 0) rotate(0) perspective(0) rotate3d(0, 0, 0, 0);
+    z-index: -1;
+  }
+}
+
+.anim-1-box2 {
+  animation-name: myanim1;
+  animation-duration: 1s;
+  transition: all .4s;
+}
+
+/////////////
+@keyframes myanim2 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-1089px, 500px, 0) translateX(-500px) rotate(45deg) perspective(500px) rotate3d(0, -100, -30, -135deg);
+    transform: translate3d(-1089px, 500px, 0) translateX(-500px) rotate(45deg) perspective(500px) rotate3d(0, -100, -30, -135deg);
+    z-index: -1;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) rotate(0) perspective(0) rotate3d(0, 0, 0, 0);
+    transform: translate3d(0, 0, 0) rotate(0) perspective(0) rotate3d(0, 0, 0, 0);
+    z-index: -1;
+  }
+}
+
+.anim-2-box2 {
+  animation-name: myanim2;
+  animation-duration: .4s;
+  transition: all .4s;
+}
+
+/////////////////////////////
+@keyframes myanim3 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(1089px, 500px, 0) translateX(-500px) rotate(-45deg) perspective(1100px) rotate3d(0, -100, -30, -220deg);
+    transform: translate3d(1089px, 500px, 0) translateX(-500px) rotate(-45deg) perspective(1100px) rotate3d(0, -100, -30, -220deg);
+    z-index: -1;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) rotate(0) perspective(0) rotate3d(0, 0, 0, 0);
+    transform: translate3d(0, 0, 0) rotate(0) perspective(0) rotate3d(0, 0, 0, 0);
+    z-index: -1;
+  }
+}
+
+.anim-3-box2 {
+  animation-name: myanim3;
+  animation-duration: 1s;
+  transition: all .4s;
+}
+
+/////////////
+//anim slider
+@keyframes myAnimSlider {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.myAnimSlider {
+  animation-name: myAnimSlider;
+  animation-duration: .6s;
+}
+
+//footer
+.container-fluid {
+
+  .wrapper-cont-footer {
+    padding: 20px 10% 45px;
+    margin: 0 -15px;
+    z-index: 999;
+    .box-link {
+      margin-bottom: 30px;
+      a {
+        display: inline-block;
+        margin: -5px 20px;
+        padding: 5px;
+        i {
+          font-size: 30px;
+          color: #373f48;
+        }
+      }
+      span.wp-link-us {
+        display: block;
+        margin-top: 35px;
+        a {
+          font-family: 'Microsoft New Tai Lue bold';
+          font-weight: bold;
+          font-size: 25px;
+          color: #1f1f1f;
+          text-decoration: underline;
+        }
+      }
+    }
+    .st-description {
+      p {
+        color: #b6b6b6;
+        font-size: 18px;
+      }
+    }
+  }
+}

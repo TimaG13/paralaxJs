@@ -134,28 +134,28 @@ $(document).ready(function () {
     // anim-1-box2
     $('.anim-1-box2').on('scrollSpy:enter', function () {
         //когда элемент виден
-        $(".anim-1-box2").css({"animation-name": "myanim1", "opacity": "1"});
+        $(".anim-1-box2").css({"animation-name": "myanim1"});
         setTimeout(function () {
             $(".anim-1-box2").removeClass("animated");
         }, 200);
     });
     $('.anim-1-box2').on('scrollSpy:exit', function () {
         //когда элемент не виден
-        $(".anim-1-box2").css({"animation-name": "none", "opacity": "0"});
+        $(".anim-1-box2").css({"animation-name": "none"});
     });
     $('.anim-1-box2').scrollSpy();
     ///////////////////
     // anim-2-box2
     $('.anim-2-box2').on('scrollSpy:enter', function () {
         //когда элемент виден
-        $(".anim-2-box2").css({"animation-name": "myanim2", "opacity": "1"});
+        $(".anim-2-box2").css({"animation-name": "myanim2"});
         setTimeout(function () {
             $(".anim-2-box2").removeClass("animated");
         }, 200);
     });
     $('.anim-2-box2').on('scrollSpy:exit', function () {
         //когда элемент не виден
-        $(".anim-2-box2").css({"animation-name": "none", "opacity": "0"});
+        $(".anim-2-box2").css({"animation-name": "none"});
     });
     $('.anim-2-box2').scrollSpy();
     ///////////////////

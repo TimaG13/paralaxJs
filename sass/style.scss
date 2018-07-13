@@ -63,6 +63,7 @@
 body {
   font: 18px 'Microsoft New Tai Lue';
   overflow-x: hidden;
+  user-select: none;
 }
 
 a, button {
@@ -541,9 +542,6 @@ section.wrapper-hd {
             }
           }
         }
-        &:nth-child(1) .slick-active {
-          margin-right: -135px;
-        }
       }
     }
   }
@@ -740,14 +738,12 @@ section.wrapper-hd {
 /////////////
 @keyframes myanim2 {
   from {
-    opacity: 0;
     -webkit-transform: translate3d(-1089px, 500px, 0) translateX(-500px) rotate(45deg) perspective(500px) rotate3d(0, -100, -30, -135deg);
     transform: translate3d(-1089px, 500px, 0) translateX(-500px) rotate(45deg) perspective(500px) rotate3d(0, -100, -30, -135deg);
     z-index: -1;
   }
 
   to {
-    opacity: 1;
     -webkit-transform: translate3d(0, 0, 0) rotate(0) perspective(0) rotate3d(0, 0, 0, 0);
     transform: translate3d(0, 0, 0) rotate(0) perspective(0) rotate3d(0, 0, 0, 0);
     z-index: -1;
@@ -757,7 +753,7 @@ section.wrapper-hd {
 .anim-2-box2 {
   animation-name: myanim2;
   animation-duration: .4s;
-  transition: all .4s;
+  transition: all .4s ease;
 }
 
 /////////////////////////////

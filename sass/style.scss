@@ -738,8 +738,17 @@ section.wrapper-hd {
 /////////////
 @keyframes myanim2 {
   from {
-    -webkit-transform: translate3d(-1089px, 500px, 0) translateX(-500px) rotate(45deg) perspective(500px) rotate3d(0, -100, -30, -135deg);
-    transform: translate3d(-1089px, 500px, 0) translateX(-500px) rotate(45deg) perspective(500px) rotate3d(0, -100, -30, -135deg);
+    -webkit-transform: translate3d(-1089px, 500px, 0)
+               translateX(-500px)
+               rotate(45deg)
+               perspective(1100px)
+               rotate3d(0, -100, -30, -135deg);
+
+    transform: translate3d(-1089px, 500px, 0)
+               translateX(-500px)
+               rotate(45deg)
+               perspective(1100px)
+               rotate3d(0, -100, -30, -135deg);
     z-index: -1;
   }
 
@@ -752,8 +761,8 @@ section.wrapper-hd {
 
 .anim-2-box2 {
   animation-name: myanim2;
-  animation-duration: .4s;
-  transition: all .4s ease;
+  animation-duration: 1s;
+  transition: all .4s;
 }
 
 /////////////////////////////
@@ -797,7 +806,7 @@ section.wrapper-hd {
 
 .myAnimSlider {
   animation-name: myAnimSlider;
-  animation-duration: .6s;
+  animation-duration: 1s;
 }
 
 //footer
@@ -837,4 +846,12 @@ section.wrapper-hd {
       }
     }
   }
+}
+//gallery animation img
+
+.slide.five.arrival {
+  left: 50%;
+  bottom: -7%;
+  transition: all .4s cubic-bezier(0, 0, 0.61, 1.13);
+  width: 930px;
 }

@@ -134,28 +134,28 @@ $(document).ready(function () {
     // anim-1-box2
     $('.anim-1-box2').on('scrollSpy:enter', function () {
         //когда элемент виден
-        $(".anim-1-box2").css({"animation-name": "myanim1"});
+        $(".anim-1-box2").css({"animation-name": "myanim1","opacity": "1"});
         setTimeout(function () {
             $(".anim-1-box2").removeClass("animated");
         }, 200);
     });
     $('.anim-1-box2').on('scrollSpy:exit', function () {
         //когда элемент не виден
-        $(".anim-1-box2").css({"animation-name": "none"});
+        $(".anim-1-box2").css({"animation-name": "none","opacity": "0"});
     });
     $('.anim-1-box2').scrollSpy();
     ///////////////////
     // anim-2-box2
     $('.anim-2-box2').on('scrollSpy:enter', function () {
         //когда элемент виден
-        $(".anim-2-box2").css({"animation-name": "myanim2"});
+        $(".anim-2-box2").css({"animation-name": "myanim2","opacity": "1"});
         setTimeout(function () {
             $(".anim-2-box2").removeClass("animated");
         }, 200);
     });
     $('.anim-2-box2').on('scrollSpy:exit', function () {
         //когда элемент не виден
-        $(".anim-2-box2").css({"animation-name": "none"});
+        $(".anim-2-box2").css({"animation-name": "none","opacity": "0"});
     });
     $('.anim-2-box2').scrollSpy();
     ///////////////////
@@ -177,8 +177,6 @@ $(document).ready(function () {
     // anim slider
     $('.myAnimSlider').on('scrollSpy:enter', function () {
         //когда элемент виден
-        //animated
-        //$(".anim-1-box2").addClass("animated");
         $(".myAnimSlider").css({"animation-name": "myAnimSlider", "opacity": "1"});
         setTimeout(function () {
             $(".myAnimSlider").removeClass("animated");
@@ -217,7 +215,6 @@ $(document).ready(function () {
 
         left = container_w / 2 - pos_x;
         tops = container_h / 2 - pos_y;
-        TweenMax.set($layer_1, {perspective: 400});
         TweenMax.to(
             $layer_1,
             1,
@@ -228,7 +225,6 @@ $(document).ready(function () {
                 ease: Expo.easeOut,
                 overwrite: 'all'
             });
-        TweenMax.set($layer_0, {perspective: 400});
         TweenMax.to(
             $layer_0,
             10,
@@ -237,7 +233,6 @@ $(document).ready(function () {
                 ease: Expo.easeOut,
                 overwrite: 'none'
             });
-        TweenMax.set($layer_2, {perspective: 400});
         TweenMax.to(
             $layer_2,
             16, {
@@ -247,8 +242,6 @@ $(document).ready(function () {
                 ease: Expo.easeOut,
                 overwrite: 'none'
             });
-
-        TweenMax.set($layer_3, {perspective: 400});
         TweenMax.to(
             $layer_3,
             10, {
@@ -259,7 +252,6 @@ $(document).ready(function () {
                 ease: Expo.easeOut,
                 overwrite: 'none'
             });
-        TweenMax.set($layer_4, {perspective: 400});
         TweenMax.to(
             $layer_4,
             10, {

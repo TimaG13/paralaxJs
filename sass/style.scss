@@ -711,6 +711,8 @@ section.wrapper-hd {
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+  animation-duration: 1s;
+  transition: all .4s ease;
 }
 
 @keyframes myanim1 {
@@ -732,7 +734,7 @@ section.wrapper-hd {
 .anim-1-box2 {
   animation-name: myanim1;
   animation-duration: 1s;
-  transition: all .4s;
+  transition: all .4s ease;
 }
 
 /////////////
@@ -762,7 +764,7 @@ section.wrapper-hd {
 .anim-2-box2 {
   animation-name: myanim2;
   animation-duration: 1s;
-  transition: all .4s;
+  transition: all .4s ease;
 }
 
 /////////////////////////////
@@ -785,7 +787,7 @@ section.wrapper-hd {
 .anim-3-box2 {
   animation-name: myanim3;
   animation-duration: 1s;
-  transition: all .4s;
+  transition: all .4s ease;
 }
 
 /////////////
@@ -807,6 +809,7 @@ section.wrapper-hd {
 .myAnimSlider {
   animation-name: myAnimSlider;
   animation-duration: 1s;
+  transition: all .4s ease;
 }
 
 //footer

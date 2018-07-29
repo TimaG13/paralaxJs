@@ -135,9 +135,6 @@ $(document).ready(function () {
     $('.anim-1-box2').on('scrollSpy:enter', function () {
         //когда элемент виден
         $(".anim-1-box2").css({"animation-name": "myanim1","opacity": "1"});
-        setTimeout(function () {
-            $(".anim-1-box2").removeClass("animated");
-        }, 200);
     });
     $('.anim-1-box2').on('scrollSpy:exit', function () {
         //когда элемент не виден
@@ -146,26 +143,20 @@ $(document).ready(function () {
     $('.anim-1-box2').scrollSpy();
     ///////////////////
     // anim-2-box2
-    $('.anim-2-box2').on('scrollSpy:enter', function () {
+    $('.wrapper-box.box-two').on('scrollSpy:enter', function () {
         //когда элемент виден
         $(".anim-2-box2").css({"animation-name": "myanim2","opacity": "1"});
-        setTimeout(function () {
-            $(".anim-2-box2").removeClass("animated");
-        }, 200);
     });
-    $('.anim-2-box2').on('scrollSpy:exit', function () {
+    $('.wrapper-box.box-two').on('scrollSpy:exit', function () {
         //когда элемент не виден
         $(".anim-2-box2").css({"animation-name": "none","opacity": "0"});
     });
-    $('.anim-2-box2').scrollSpy();
+    $('.wrapper-box.box-two').scrollSpy();
     ///////////////////
     // anim-3-box2
     $('.anim-3-box2').on('scrollSpy:enter', function () {
         //когда элемент виден
         $(".anim-3-box2").css({"animation-name": "myanim3", "opacity": "1"});
-        setTimeout(function () {
-            $(".anim-3-box2").removeClass("animated");
-        }, 200);
     });
     $('.anim-3-box2').on('scrollSpy:exit', function () {
         //когда элемент не виден
@@ -178,9 +169,6 @@ $(document).ready(function () {
     $('.myAnimSlider').on('scrollSpy:enter', function () {
         //когда элемент виден
         $(".myAnimSlider").css({"animation-name": "myAnimSlider", "opacity": "1"});
-        setTimeout(function () {
-            $(".myAnimSlider").removeClass("animated");
-        }, 200);
     });
     $('.myAnimSlider').on('scrollSpy:exit', function () {
         //когда элемент не виден
@@ -240,24 +228,24 @@ $(document).ready(function () {
                     transform: "matrix3d(0," * tops / left / 5 + "0" * tops / left / 5 + "%,0,0)"
                 },
                 ease: Expo.easeOut,
-                overwrite: 'none'
+                overwrite: 'all'
             });
         TweenMax.to(
             $layer_3,
             10, {
                 css:
                     {
-                        transform: 'rotateY(0' + left / 100 + 'deg)'
+                        transform: 'rotateY(0' +  left / 100 + 'deg)'
                     },
                 ease: Expo.easeOut,
-                overwrite: 'none'
+                overwrite: 'all'
             });
         TweenMax.to(
             $layer_4,
             10, {
                 css:
                     {
-                        transform: 'rotateY(0' + left / 50 + 'deg)'
+                        transform: 'rotateY(0' - left / 30 + 'deg)'
                     },
                 ease: Expo.easeOut,
                 overwrite: 'all'

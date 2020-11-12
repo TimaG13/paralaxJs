@@ -20,71 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8147b30e-dc8a-4c44-98c7-0fd8da59bcfa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jquery.mCustomScrollbar.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/script.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/sass/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/jquery/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/Gruntfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/dist/skrollr.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/amd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/anchor_target.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/anchors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/bg_constant_speed_less.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/bg_constant_speed_more.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/circular_motion.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/classic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/docu/1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/docu/2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/docu/3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/docu/4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/fixed-positioning.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/fixed_nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/gradientsmotherfucker.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/images/bubbles.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/images/bubbles2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/images/bubbles3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/images/bubbles_small.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/images/face.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/images/kitteh1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/images/kitteh2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/images/kitteh3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/images/path.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/images/slj.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/path.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/pausing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/scripts/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/scripts/require.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/examples/svg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/guide/anchor-position-guide.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/guide/anchor-position-guide.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/shim.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/src/skrollr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/test/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/test/loading-tests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/test/loading.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/test/qunit-numeric-css-property-equals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/test/qunit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/test/qunit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/test/require.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skrollr-master/test/tests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +30,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,6 +50,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -140,18 +81,21 @@
       <workItem from="1529663631563" duration="6341000" />
       <workItem from="1529851461865" duration="41000" />
       <workItem from="1594812102999" duration="4826000" />
+      <workItem from="1605166449677" duration="1049000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

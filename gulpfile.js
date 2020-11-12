@@ -1,7 +1,6 @@
 const gulp                 = require('gulp'),
       sass                 = require('gulp-sass'),
       sourcemaps           = require('gulp-sourcemaps'),
-      watch                = require('gulp-watch'),
       autoprefixer         = require('gulp-autoprefixer'),
       concat               = require('gulp-concat'),
       cleanCSS             = require('gulp-clean-css'),

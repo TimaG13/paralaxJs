@@ -1,5 +1,3 @@
-//scroll
-
 $(document).ready(function () {
 
     // anim rand text
